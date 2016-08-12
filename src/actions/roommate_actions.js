@@ -3,9 +3,11 @@ export const UTILITY_CHANGE = 'UTILITY_CHANGE'
 export const AMOUNT_CHANGE = 'AMOUNT_CHANGE'
 export const UPLOAD_PHOTO = 'UPLOAD_PHOTO'
 
-function name(){
+function name(id, name){
   return {
-    type: NAME_CHANGE
+    type: NAME_CHANGE,
+    id,
+    name
   }
 }
 
