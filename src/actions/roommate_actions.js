@@ -10,21 +10,24 @@ function name(id, name){
     name
   }
 }
-
-function utility(){
+function utility(id, utility){
   return {
-    type: UTILITY_CHANGE
+    type: UTILITY_CHANGE,
+    id,
+    utility
   }
 }
-
-function amount(){
+function amount(id, amount){
   return {
-    type: AMOUNT_CHANGE
+    type: AMOUNT_CHANGE,
+    id,
+    amount
   }
 }
-
-function photo(){
+function photo(id, photo){
   return {
-    type: UPLOAD_PHOTO
+    type: UPLOAD_PHOTO,
+    id,
+    photo
   }
 }
