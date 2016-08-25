@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-export default const Roommate = () => {
+const Roommate = ( { roommate } ) => {
   return (
     <div className='roommate'>
-      <div className='name'></div>
-      <div className='utility'></div>
-      <div className='amount'></div>
-      <div className='avatar'></div>
-      <div className='calculations'></div>
+      <div className='name'> {roommate.name} </div>
+      <div className='utility'> {roommate.utility} </div>
+      <div className='amount'> {roommate.amount} </div>
     </div>
   )
 }
+
+export default Roommate

@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import Header from './Header'
+import Story from './Story'
+import Dashboard from './Dashboard'
+
 import {
   updateAmount,
   addRoommate,
@@ -14,7 +18,12 @@ class RoommateApp extends Component {
   render(){
     return (
       <div>
-
+        <Header />
+        <Story />
+        <Dashboard
+          roommates={this.props.roommates}
+          total={this.props.total}
+        />
       </div>
     )
   }

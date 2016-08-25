@@ -20,10 +20,7 @@ export function roommates(state=INITIAL_STATE, action){
       return
       break;
     case AMOUNT_CHANGE:
-
-      break;
-    case UPLOAD_PHOTO:
-
+      return 
       break;
     default:
       return state
