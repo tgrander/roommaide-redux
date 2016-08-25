@@ -4,24 +4,20 @@ import {
   INPUT_AMOUNT,
   NAME_EDIT,
   UTILITY_EDIT
-} from '../actions/roommateActions'
+} from '../actions/roommate_actions'
 
 const INITIAL_STATE = {
   roommates: {},
   total: 0
 }
 
-function roommates(state=INITIAL_STATE, action){
+export function roommates(state=INITIAL_STATE, action){
   switch (action.type) {
     case NAME_CHANGE:
-      return Object.assign({}, state, {
-        {action.id: {name: action.name}}
-      })
+      return
       break;
     case UTILITY_CHANGE:
-      return Object.assign({}, state, {
-        roommates[utility] = action.utility
-      })
+      return
       break;
     case AMOUNT_CHANGE:
 

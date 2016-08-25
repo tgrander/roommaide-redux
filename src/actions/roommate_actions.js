@@ -4,30 +4,35 @@ export const INPUT_AMOUNT = 'INPUT_AMOUNT'
 export const NAME_EDIT = 'NAME_EDIT'
 export const UTILITY_EDIT = 'UTILITY_EDIT'
 
-function name(id, name){
+export function updateName(id, name){
   return {
     type: NAME_EDIT,
     id,
     name
   }
 }
-function utility(id, utility){
+export function updateUtility(id, utility){
   return {
     type: UTILITY_EDIT,
     id,
     utility
   }
 }
-function amount(id, amount){
+export function updateAmount(id, amount){
   return {
     type: INPUT_AMOUNT,
     id,
     amount
   }
 }
-function delete(id){
+export function addRoommate(){
   return {
-    action: DELETE_ROOMIE,
+    type: ADD_ROOMIE
+  }
+}
+export function deleteRoommate(id){
+  return {
+    type: DELETE_ROOMIE,
     id
   }
 }
