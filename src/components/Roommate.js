@@ -6,7 +6,7 @@ export default const Roommate = () => {
       <div className='name'></div>
       <div className='utility'></div>
       <div className='amount'></div>
-      <div className='photo'></div>
+      <div className='avatar'></div>
       <div className='calculations'></div>
     </div>
   )

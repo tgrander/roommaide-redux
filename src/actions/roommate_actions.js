@@ -1,33 +1,33 @@
-export const NAME_CHANGE = 'NAME_CHANGE'
-export const UTILITY_CHANGE = 'UTILITY_CHANGE'
-export const AMOUNT_CHANGE = 'AMOUNT_CHANGE'
-export const UPLOAD_PHOTO = 'UPLOAD_PHOTO'
+export const ADD_ROOMIE = 'ADD_ROOMIE'
+export const DELETE_ROOMIE = 'DELETE_ROOMIE'
+export const INPUT_AMOUNT = 'INPUT_AMOUNT'
+export const NAME_EDIT = 'NAME_EDIT'
+export const UTILITY_EDIT = 'UTILITY_EDIT'
 
 function name(id, name){
   return {
-    type: NAME_CHANGE,
+    type: NAME_EDIT,
     id,
     name
   }
 }
 function utility(id, utility){
   return {
-    type: UTILITY_CHANGE,
+    type: UTILITY_EDIT,
     id,
     utility
   }
 }
 function amount(id, amount){
   return {
-    type: AMOUNT_CHANGE,
+    type: INPUT_AMOUNT,
     id,
     amount
   }
 }
-function photo(id, photo){
+function delete(id){
   return {
-    type: UPLOAD_PHOTO,
-    id,
-    photo
+    action: DELETE_ROOMIE,
+    id
   }
 }

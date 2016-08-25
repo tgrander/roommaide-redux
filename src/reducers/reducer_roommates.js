@@ -1,9 +1,10 @@
 import {
-  NAME_CHANGE,
-  UTILITY_CHANGE,
-  AMOUNT_CHANGE,
-  UPLOAD_PHOTO
-} from '../actions/roommate_actions'
+  ADD_ROOMIE,
+  DELETE_ROOMIE,
+  INPUT_AMOUNT,
+  NAME_EDIT,
+  UTILITY_EDIT
+} from '../actions/roommateActions'
 
 const INITIAL_STATE = {
   roommates: {},
