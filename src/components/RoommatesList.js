@@ -2,19 +2,19 @@ import React from 'react'
 
 import Roommate from './Roommate'
 
-const RoommateList = () => (
+const RoommatesList = ({roommates}) => (
   <div>
     {mapRoommates(roommates)}
   </div>
 )
 
 const mapRoommates = (roommates) => (
-  roommates.map(roommate =>
+  Object.keys(roommates).map(id =>
     <Roommate
-      key={roommate.id}
-      roommate={roommate}
+      key={id}
+      roommate={roommates[id]}
     />
   )
 )
 
-export default RoommateList
+export default RoommatesList

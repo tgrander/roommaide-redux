@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
+import RoommateApp  from './containers/RoommateApp'
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <p className="App-intro">
-          HELLO WORLD
-        </p>
+        <RoommateApp />
       </div>
     );
   }

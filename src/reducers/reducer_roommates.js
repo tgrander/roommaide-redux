@@ -11,18 +11,25 @@ const INITIAL_STATE = {
   total: 0
 }
 
-export function roommates(state=INITIAL_STATE, action){
+const roommates = (state=INITIAL_STATE, action) => {
   switch (action.type) {
-    case NAME_CHANGE:
+    case NAME_EDIT:
       return
-      break;
-    case UTILITY_CHANGE:
+
+    case UTILITY_EDIT:
       return
-      break;
-    case AMOUNT_CHANGE:
-      return 
-      break;
+
+    case INPUT_AMOUNT:
+      return
+
+    case ADD_ROOMIE:
+      return Object.assign({}, state, {
+        roommates: action.updatedRoommates
+      })
+
     default:
       return state
   }
 }
+
+export default roommates

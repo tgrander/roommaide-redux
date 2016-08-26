@@ -1,7 +1,9 @@
 import React from 'react'
 
+import '../css/story.css'
+
 const Story = () => (
-  <div>
+  <div className="story">
     <h2>THE STORY</h2>
     <p>Four roommates</p>
   </div>

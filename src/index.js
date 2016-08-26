@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import roommates from './reducers/reducer_roommates'
+import roommaideApp from './reducers/index'
 
 import App from './App';
 
-let store = createStore(roommates)
+var store = createStore(roommaideApp)
 
 ReactDOM.render(
   <Provider store={store}>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => (
   <div>
-    ROOMMAIDE
+    <h1>ROOMMAIDE</h1>
   </div>
 )
 

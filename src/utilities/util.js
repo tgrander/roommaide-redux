@@ -1,10 +1,10 @@
 let idCounter = 1
 
-export default function newRoommate(name, utility, amount){
-  this.id=idCounter++
-  this.name=name
-  this.utility=utility
-  this.amount=amount
-  this.payTo={}
-  this.receiveFrom={}
+const Roommate = function(name, utility, amount){
+  this.id = idCounter++
+  this.name = name || `Roommate ${this.id}`
+  this.utility = utility || 'Undefined Utility'
+  this.amount = amount || ""
 }
+
+export default Roommate

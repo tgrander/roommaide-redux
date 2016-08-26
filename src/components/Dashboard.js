@@ -1,15 +1,17 @@
 import React from 'react'
 
-import RoommateList from './RoommateList'
+import RoommatesList from './RoommatesList'
 import Summary from './Summary'
 
-const Dashboard = ( { roommates, total } ) => {
+const Dashboard = ({roommates, total}) => {
   return (
     <div>
-      <RoommateList
-        roommates={roommates}/>
+      <RoommatesList
+        roommates={roommates}
+      />
       <Summary
-        total={total}/>
+        total={total}
+      />
     </div>
   )
 }
