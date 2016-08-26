@@ -20,13 +20,6 @@ class RoommateApp extends Component {
           console.log("PROPS: ", this.props);
       }
 
-      componentWillMount(){
-          // Autmoatically create three roommates for presentation purposes when component mounts
-          for (var i = 0; i < 4; i++) {
-            this.props.addRoommate(this.props.roommates)
-          }
-      }
-
       _handleAmountInput(id, amount){
           this.props.updateAmount(id, amount, this.props.roommates)
       }

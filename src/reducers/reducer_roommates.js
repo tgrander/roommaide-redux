@@ -1,3 +1,5 @@
+import Roommate from '../utilities/roommates'
+
 import {
   ADD_ROOMIE,
   DELETE_ROOMIE,
@@ -7,7 +9,11 @@ import {
 } from '../actions/roommate_actions'
 
 const INITIAL_STATE = {
-  roommates: {},
+  roommates: {
+    1: new Roommate,
+    2: new Roommate,
+    3: new Roommate
+  },
   total: 0
 }
 

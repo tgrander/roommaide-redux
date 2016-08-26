@@ -4,9 +4,13 @@ import '../css/roommate.css'
 
 const Roommate = ( { roommate, handleAmountInput } ) => {
 
-  const id = roommate.id
-  const val = (amount) => {
-    handleAmountInput(id, amount)
+  const input = (e) => {
+    const parsedAmount = +e.target.value
+    console.log('e.target.value: ', +e.target.value);
+    console.log('parsedAmount: ', parsedAmount);
+    if (Number.isInteger(parsedAmount)) {
+      handleAmountInput(roommate.id, parsedAmount)
+    }
   }
 
   return (
@@ -17,8 +21,8 @@ const Roommate = ( { roommate, handleAmountInput } ) => {
           className="amount-input"
           type="text"
           placeholder="Enter Amount"
-          
-          onChange={amount => input(amount)}/>
+
+          onChange={e => input(e)}/>
     </div>
   )
 }
