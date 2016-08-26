@@ -1,13 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import roommaideApp from './reducers/index'
+import configureStore from './store/store'
 
 import App from './App';
 
-var store = createStore(roommaideApp)
+const store = configureStore()
 
 ReactDOM.render(
   <Provider store={store}>

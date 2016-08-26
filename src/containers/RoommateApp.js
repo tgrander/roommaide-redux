@@ -23,6 +23,9 @@ class RoommateApp extends Component {
       _handleAmountInput(id, amount){
           this.props.updateAmount(id, amount, this.props.roommates)
       }
+      _handleAddRoommateClick(){
+        this.props.addRoommate(this.props.roommates)
+      }
 
       render(){
           return (
@@ -32,7 +35,8 @@ class RoommateApp extends Component {
               <Dashboard
                 roommates={this.props.roommates}
                 total={this.props.total}
-                handleAmountInput={this._handleAmountInput.bind(this)}/>
+                handleAmountInput={this._handleAmountInput.bind(this)}
+                addRoommate={this._handleAddRoommateClick.bind(this)}/>
             </div>
           )
       }
