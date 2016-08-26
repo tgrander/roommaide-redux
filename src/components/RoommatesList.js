@@ -2,17 +2,18 @@ import React from 'react'
 
 import Roommate from './Roommate'
 
-const RoommatesList = ({roommates}) => {
+const RoommatesList = ({roommates, onAmountInput, onAddRoommateClick}) => {
 
-  // const mapRoommates = (roommates) => (
-  //   Object.keys(roommates).map(id =>
-  //     <Roommate
-  //       key={id}
-  //       roommate={roommates[id]}
-  //       handleAmountInput={handleAmountInput}
-  //     />
-  //   )
-  // )
+  const mapRoommates = (roommates) => (
+    Object.keys(roommates).map(id =>
+      <Roommate
+        key={id}
+        roommate={roommates[id]}
+        roommates={roommates}
+        onAmountInput={onAmountInput}
+      />
+    )
+  )
 
   const newRoommate = (e) => {
     e.preventDefault()
@@ -24,7 +25,7 @@ const RoommatesList = ({roommates}) => {
   return (
     <div>
       <div>
-
+        {mapRoommates(roommates)}
       </div><br/>
       <a
         className="add-roomie"

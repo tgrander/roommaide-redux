@@ -14,7 +14,7 @@ const INITIAL_STATE = {
     2: new Roommate,
     3: new Roommate
   },
-  numberofRoommates: 0,
+  numberofRoommates: 3,
   total: 0
 }
 

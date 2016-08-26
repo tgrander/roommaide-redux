@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 
 import '../css/roommate.css'
 
-const Roommate = ( { roommate, handleAmountInput } ) => {
+const Roommate = ( { roommate, roommates, onAmountInput } ) => {
 
   const input = (e) => {
     const parsedAmount = +e.target.value
     if (Number.isInteger(parsedAmount)) {
-      handleAmountInput(roommate.id, parsedAmount)
+      onAmountInput(roommate.id, parsedAmount, roommates)
     }
   }
 
