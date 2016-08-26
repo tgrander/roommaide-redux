@@ -6,8 +6,6 @@ const Roommate = ( { roommate, handleAmountInput } ) => {
 
   const input = (e) => {
     const parsedAmount = +e.target.value
-    console.log('e.target.value: ', +e.target.value);
-    console.log('parsedAmount: ', parsedAmount);
     if (Number.isInteger(parsedAmount)) {
       handleAmountInput(roommate.id, parsedAmount)
     }

@@ -14,6 +14,7 @@ export function updateName(id, name, roommates){
     name
   }
 }
+
 export function updateUtility(id, utility, roommates){
   return {
     type: UTILITY_EDIT,
@@ -21,6 +22,7 @@ export function updateUtility(id, utility, roommates){
     utility
   }
 }
+
 export function updateAmount(id, amount, roommates){
   roommates[id].amount = amount
   return {
@@ -29,24 +31,33 @@ export function updateAmount(id, amount, roommates){
     total: calculateTotal(roommates)
   }
 }
+
+function updateRoommates(roommates){
+  return {
+    type: ADD_ROOMIE,
+    updatedRoommates: roommates,
+    numberofRoommates: Object.keys(roommates).length
+  }
+}
+
 export function addRoommate(roommates){
   return dispatch => {
     return new Promise((resolve, reject) => {
-      const newRoommate = new Roommate, id = newRoommate.id;
+      const newRoommate = new Roommate(), id = newRoommate.id;
       roommates[id] = newRoommate
       resolve(roommates)
     })
     .then((roommates) => {
-      return {
-        type: ADD_ROOMIE,
-        updatedRoommates: roommates
-      }
+      console.log('Updated roommates: ', roommates);
+      dispatch(updateRoommates(roommates))
     })
   }
 }
+
 export function deleteRoommate(id, roommates){
   return {
     type: DELETE_ROOMIE,
-    id
+    id,
+    numberofRoommates: Object.keys(roommates).length
   }
 }

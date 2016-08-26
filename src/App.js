@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
-import RoommateApp  from './containers/RoommateApp'
+import RoommateApp from './containers/RoommateApp'
+import TotalApp from './containers/TotalApp'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <RoommateApp />
+        <TotalApp />
       </div>
     );
   }

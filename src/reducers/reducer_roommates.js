@@ -14,6 +14,7 @@ const INITIAL_STATE = {
     2: new Roommate,
     3: new Roommate
   },
+  numberofRoommates: 0,
   total: 0
 }
 
@@ -33,7 +34,8 @@ const roommates = (state=INITIAL_STATE, action) => {
 
     case ADD_ROOMIE:
       return Object.assign({}, state, {
-        roommates: action.updatedRoommates
+        roommates: action.updatedRoommates,
+        numberofRoommates: action.numberofRoommates
       })
 
     default:

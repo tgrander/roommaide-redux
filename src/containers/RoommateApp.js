@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import Header from '../components/Header'
-import Story from '../components/Story'
 import Dashboard from '../components/Dashboard'
 
 import {
@@ -13,54 +11,35 @@ import {
   updateUtility
 } from '../actions/roommate_actions'
 
-class RoommateApp extends Component {
-
-      constructor(props){
-          super(props)
-          console.log("PROPS: ", this.props);
-      }
-
-      _handleAmountInput(id, amount){
-          this.props.updateAmount(id, amount, this.props.roommates)
-      }
-      _handleAddRoommateClick(){
-        this.props.addRoommate(this.props.roommates)
-      }
-
-      render(){
-          return (
-            <div>
-              <Header />
-              <Story />
-              <Dashboard
-                roommates={this.props.roommates}
-                total={this.props.total}
-                handleAmountInput={this._handleAmountInput.bind(this)}
-                addRoommate={this._handleAddRoommateClick.bind(this)}/>
-            </div>
-          )
-      }
-
-}
-
-export default RoommateApp
+// class RoommateApp extends Component {
+//
+//       _handleAmountInput(id, amount){
+//           this.props.updateAmount(id, amount, this.props.roommates)
+//       }
+//       _handleAddRoommateClick(){
+//         this.props.addRoommate(this.props.roommates)
+//       }
+//
+// }
 
 const mapStateToProps = (state) => {
-  console.log('STATE: ', state);
-  const { total, roommates } = state.roommates
+  const { roommates } = state.roommates
+  console.log('ROOMMATES: ', roommates);
   return {
-    total: total,
     roommates: roommates
   }
 }
 
-export default connect(
-  mapStateToProps,
-  {
-    updateAmount,
-    addRoommate,
-    deleteRoommate,
-    updateName,
-    updateUtility
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onAmountInput: (id, amount, roommates) => dispatch(updateAmount(id, amount, roommates)),
+    onAddRoommateClick: (roommates) => dispatch(addRoommate(roommates))
   }
-)(RoommateApp)
+}
+
+const RoommateApp =  connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Dashboard)
+
+export default RoommateApp
