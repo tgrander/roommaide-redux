@@ -1,3 +1,4 @@
+// import * as util from '../utilities/util.js'
 import Roommate from '../utilities/util.js'
 
 export const ADD_ROOMIE = 'ADD_ROOMIE'
@@ -21,13 +22,16 @@ export function updateUtility(id, utility, roommates){
   }
 }
 export function updateAmount(id, amount, roommates){
+  roommates[id].amount = amount
   return {
     type: INPUT_AMOUNT,
-    id,
-    amount
+    roommates: roommates
+    // total: calculateTotal(roommates)
   }
 }
 export function addRoommate(roommates){
+  // console.log('util ', util)
+  console.log('roommate constructor', Roommate);;
   const newRoommate = new Roommate, id = newRoommate.id;
   roommates[id] = newRoommate
   return {

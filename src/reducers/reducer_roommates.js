@@ -20,7 +20,10 @@ const roommates = (state=INITIAL_STATE, action) => {
       return
 
     case INPUT_AMOUNT:
-      return
+      return Object.assign({}, state, {
+        roommates: action.roommates,
+        total: action.total
+      })
 
     case ADD_ROOMIE:
       return Object.assign({}, state, {

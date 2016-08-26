@@ -2,7 +2,13 @@ import React, { Component } from 'react'
 
 import '../css/roommate.css'
 
-const Roommate = ( { roommate } ) => {
+const Roommate = ( { roommate, handleAmountInput } ) => {
+
+  const id = roommate.id
+  const val = (amount) => {
+    handleAmountInput(id, amount)
+  }
+
   return (
     <div className='roommate'>
       <div className='name'> {roommate.name} </div>
@@ -11,7 +17,8 @@ const Roommate = ( { roommate } ) => {
           className="amount-input"
           type="text"
           placeholder="Enter Amount"
-          value={roommate.amount}/>
+          
+          onChange={amount => input(amount)}/>
     </div>
   )
 }
