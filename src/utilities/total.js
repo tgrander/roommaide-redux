@@ -3,7 +3,6 @@ const calculateTotal = (roommates) => {
   for (var key in roommates) {
     total += roommates[key].amount
   }
-  console.log('total: ', total);
   return total
 }
 
