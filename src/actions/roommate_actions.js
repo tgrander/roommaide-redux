@@ -32,7 +32,7 @@ export function updateAmount(id, amount, roommates){
   }
 }
 
-function updateRoommates(roommates){
+function updateRoommates(){
   return {
     type: ADD_ROOMIE,
     updatedRoommates: roommates,
@@ -40,17 +40,10 @@ function updateRoommates(roommates){
   }
 }
 
-export function addRoommate(roommates){
+export function addRoommate(){
   return dispatch => {
-    return new Promise((resolve, reject) => {
-      const newRoommate = new Roommate(), id = newRoommate.id;
-      roommates[id] = newRoommate
-      resolve(roommates)
-    })
-    .then((roommates) => {
-      console.log('Updated roommates: ', roommates);
-      dispatch(updateRoommates(roommates))
-    })
+    const newRoommate = new Roommate(), id = newRoommate.id;
+    dispatch(updateRoommates())
   }
 }
 
