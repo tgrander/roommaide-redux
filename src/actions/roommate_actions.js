@@ -23,12 +23,11 @@ export function updateUtility(id, utility, roommates){
   }
 }
 
-export function updateAmount(id, amount, roommates){
-  roommates[id].amount = amount
+export function updateAmount(id, amount){
   return {
     type: INPUT_AMOUNT,
-    roommates: roommates,
-    total: calculateTotal(roommates)
+    id,
+    amount
   }
 }
 

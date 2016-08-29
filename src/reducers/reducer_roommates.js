@@ -16,9 +16,7 @@ const INITIAL_STATE = {
     1: new Roommate,
     2: new Roommate,
     3: new Roommate
-  },
-  numberofRoommates: 3,
-  total: 0
+  }
 }
 
 const roommates = (state=INITIAL_STATE, action) => {
@@ -30,9 +28,12 @@ const roommates = (state=INITIAL_STATE, action) => {
       return
 
     case INPUT_AMOUNT:
-      return Object.assign({}, state, {
-        roommates: action.roommates,
-        total: action.total
+      return update(state, {
+        roommates: {
+          [action.id]: {
+            amount: {$set: action.amount}
+          }
+        }
       })
 
     case ADD_ROOMIE:
@@ -45,6 +46,17 @@ const roommates = (state=INITIAL_STATE, action) => {
     default:
       return state
   }
+}
+
+export function getTotal(roommates){
+  Object.keys(roommates).reduce((total, id) => {
+    total += roommates[id].amount
+    return total
+  }, 0)
+}
+
+export function getNumberOfRoommates(roommates){
+  return Object.keys(roommates).length
 }
 
 export default roommates

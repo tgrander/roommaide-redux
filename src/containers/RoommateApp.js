@@ -15,7 +15,8 @@ const mapStateToProps = (state) => {
   const { roommates } = state.roommates
   console.log('ROOMMATES: ', roommates);
   return {
-    roommates: roommates
+    roommates: roommates,
+    total: 
   }
 }
 
