@@ -6,7 +6,8 @@ const Summary = ({total, numberofRoommates}) => (
     <h3>Summary</h3>
     <Total
       total={total}
-      numberofRoommates={numberofRoommates}/>
+      numberofRoommates={numberofRoommates}
+      />
   </div>
 )
 

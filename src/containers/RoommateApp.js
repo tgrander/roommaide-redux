@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import Dashboard from '../components/Dashboard'
 
+import { getTotal, getNumberOfRoommates } from '../reducers/reducer_roommates'
+
 import {
   updateAmount,
   addRoommate,
@@ -16,7 +18,8 @@ const mapStateToProps = (state) => {
   console.log('ROOMMATES: ', roommates);
   return {
     roommates: roommates,
-    total: 
+    total: getTotal(roommates),
+    numberofRoommates: getNumberOfRoommates(roommates)
   }
 }
 

@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 
 import RoommatesList from './RoommatesList'
-import TotalApp from '../containers/TotalApp'
+import Summary from './Summary'
 
 const Dashboard = ({
   roommates,
   onAmountInput,
-  onAddRoommateClick
+  onAddRoommateClick,
+  total,
+  numberofRoommates
 }) => {
   return (
     <div>
@@ -15,7 +17,10 @@ const Dashboard = ({
         onAmountInput={onAmountInput}
         onAddRoommateClick={onAddRoommateClick}
         />
-      <TotalApp />
+      <Summary
+        total={total}
+        numberofRoommates={numberofRoommates}
+        />
     </div>
   )
 }
