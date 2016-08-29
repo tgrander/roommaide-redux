@@ -24,8 +24,8 @@ const mapDispatchToProps = (dispatch) => {
     onAmountInput: (id, amount, roommates) => {
       dispatch(updateAmount(id, amount, roommates))
     },
-    onAddRoommateClick: (roommates) => {
-      dispatch(addRoommate(roommates))
+    onAddRoommateClick: () => {
+      dispatch(addRoommate())
     }
   }
 }

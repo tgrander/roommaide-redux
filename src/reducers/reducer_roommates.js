@@ -1,4 +1,7 @@
 import Roommate from '../utilities/roommates'
+import update from 'react-addons-update'
+
+console.log('UPDATE FUNCTION: ', update);
 
 import {
   ADD_ROOMIE,
@@ -33,9 +36,10 @@ const roommates = (state=INITIAL_STATE, action) => {
       })
 
     case ADD_ROOMIE:
-      return Object.assign({}, state, {
-        roommates: action.updatedRoommates,
-        numberofRoommates: action.numberofRoommates
+      return update(state, {
+        roommates: {
+          [action.newRoommateId]: {$set: action.newRoommate}
+        }
       })
 
     default:
