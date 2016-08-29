@@ -1,8 +1,6 @@
 import Roommate from '../utilities/roommates'
 import update from 'react-addons-update'
 
-console.log('UPDATE FUNCTION: ', update);
-
 import {
   ADD_ROOMIE,
   DELETE_ROOMIE,
@@ -49,7 +47,7 @@ const roommates = (state=INITIAL_STATE, action) => {
 }
 
 export function getTotal(roommates){
-  Object.keys(roommates).reduce((total, id) => {
+  return Object.keys(roommates).reduce((total, id) => {
     total += roommates[id].amount
     return total
   }, 0)
