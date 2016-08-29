@@ -2,7 +2,15 @@ import React, { Component } from 'react'
 
 import Roommate from './Roommate'
 
-const RoommatesList = ({roommates, onAmountInput, onAddRoommateClick}) => {
+const RoommatesList = ({
+
+  roommates,
+  onAmountInput,
+  onAddRoommateClick,
+  onUpdateName,
+  onUpdateUtility
+
+}) => {
 
   const mapRoommates = (roommates) => (
     Object.keys(roommates).map(id =>
@@ -10,6 +18,8 @@ const RoommatesList = ({roommates, onAmountInput, onAddRoommateClick}) => {
         key={id}
         roommate={roommates[id]}
         onAmountInput={onAmountInput}
+        onUpdateName={onUpdateName}
+        onUpdateUtility={onUpdateUtility}
       />
     )
   )

@@ -1,13 +1,8 @@
 import Roommate from '../utilities/roommates'
 import calculateTotal from '../utilities/total'
 
-export const ADD_ROOMIE = 'ADD_ROOMIE'
-export const DELETE_ROOMIE = 'DELETE_ROOMIE'
-export const INPUT_AMOUNT = 'INPUT_AMOUNT'
 export const NAME_EDIT = 'NAME_EDIT'
-export const UTILITY_EDIT = 'UTILITY_EDIT'
-
-export function updateName(id, name, roommates){
+export function updateName(id, name){
   return {
     type: NAME_EDIT,
     id,
@@ -15,7 +10,8 @@ export function updateName(id, name, roommates){
   }
 }
 
-export function updateUtility(id, utility, roommates){
+export const UTILITY_EDIT = 'UTILITY_EDIT'
+export function updateUtility(id, utility){
   return {
     type: UTILITY_EDIT,
     id,
@@ -23,6 +19,7 @@ export function updateUtility(id, utility, roommates){
   }
 }
 
+export const INPUT_AMOUNT = 'INPUT_AMOUNT'
 export function updateAmount(id, amount){
   return {
     type: INPUT_AMOUNT,
@@ -31,6 +28,7 @@ export function updateAmount(id, amount){
   }
 }
 
+export const ADD_ROOMIE = 'ADD_ROOMIE'
 function updateRoommates(newRoommateId, newRoommate){
   return {
     type: ADD_ROOMIE,
@@ -47,6 +45,7 @@ export function addRoommate(){
   }
 }
 
+export const DELETE_ROOMIE = 'DELETE_ROOMIE'
 export function deleteRoommate(id, roommates){
   return {
     type: DELETE_ROOMIE,

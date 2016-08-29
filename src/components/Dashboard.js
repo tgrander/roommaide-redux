@@ -8,7 +8,9 @@ const Dashboard = ({
   onAmountInput,
   onAddRoommateClick,
   total,
-  numberofRoommates
+  numberofRoommates,
+  onUpdateUtility,
+  onUpdateName
 }) => {
   return (
     <div>
@@ -16,6 +18,8 @@ const Dashboard = ({
         roommates={roommates}
         onAmountInput={onAmountInput}
         onAddRoommateClick={onAddRoommateClick}
+        onUpdateName={onUpdateName}
+        onUpdateUtility={onUpdateUtility}
         />
       <Summary
         total={total}

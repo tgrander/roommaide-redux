@@ -27,11 +27,17 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onAmountInput: (id, amount, roommates) => {
-      dispatch(updateAmount(id, amount, roommates))
+    onAmountInput: (id, amount) => {
+      dispatch(updateAmount(id, amount))
     },
     onAddRoommateClick: () => {
       dispatch(addRoommate())
+    },
+    onUpdateName: (id, name) => {
+      dispatch(updateName(id, name))
+    },
+    onUpdateUtility: (id, utility) => {
+      dispatch(updateUtility(id, utility))
     }
   }
 }

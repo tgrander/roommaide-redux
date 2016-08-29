@@ -20,10 +20,22 @@ const INITIAL_STATE = {
 const roommates = (state=INITIAL_STATE, action) => {
   switch (action.type) {
     case NAME_EDIT:
-      return
+      return update(state, {
+        roommates: {
+          [action.id]: {
+            name: {$set: action.name}
+          }
+        }
+      })
 
     case UTILITY_EDIT:
-      return
+    return update(state, {
+      roommates: {
+        [action.id]: {
+          utility: {$set: action.utility}
+        }
+      }
+    })
 
     case INPUT_AMOUNT:
       return update(state, {
