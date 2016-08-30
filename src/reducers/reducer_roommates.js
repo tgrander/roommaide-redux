@@ -11,9 +11,9 @@ import {
 
 const INITIAL_STATE = {
   roommates: {
-    1: new Roommate,
-    2: new Roommate,
-    3: new Roommate
+    1: new Roommate("Internet"),
+    2: new Roommate("Gas"),
+    3: new Roommate("Electricity")
   }
 }
 
