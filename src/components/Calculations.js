@@ -1,10 +1,14 @@
 import React from 'react'
 
+import currentMonth from '../utilities/currentMonth.js'
+
 const Calculations = ({total, numberofRoommates, roommates, totalPerRoommate}) => {
 
   const getTotalPerRoommate = (total, numberofRoommates) => {
     return numberofRoommates > 0 ? total/numberofRoommates : 0;
   }
+
+  console.log('current month function: ', currentMonth);
 
   const perRoommate = getTotalPerRoommate(total, numberofRoommates)
 
@@ -57,7 +61,7 @@ const Calculations = ({total, numberofRoommates, roommates, totalPerRoommate}) =
 
   return (
     <div>
-      <h3>Amounts Owed</h3>
+      <h3>{currentMonth()}</h3>
       {resultsList}
     </div>
   )
