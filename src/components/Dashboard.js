@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import getTotalPerRoommate from '../reducers/reducer_roommates'
+
 import RoommatesList from './RoommatesList'
 import Summary from './Summary'
 
@@ -12,6 +14,8 @@ const Dashboard = ({
   onUpdateUtility,
   onUpdateName
 }) => {
+  console.log('per roommate function: ', getTotalPerRoommate);
+  const totalPerRoommate = getTotalPerRoommate(total, numberofRoommates)
   return (
     <div>
       <RoommatesList
@@ -22,8 +26,10 @@ const Dashboard = ({
         onUpdateUtility={onUpdateUtility}
         />
       <Summary
+        roommates={roommates}
         total={total}
         numberofRoommates={numberofRoommates}
+        totalPerRoommate={totalPerRoommate}
         />
     </div>
   )

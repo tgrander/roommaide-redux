@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import Roommate from './Roommate'
 
+import '../css/roommateList.css'
+
 const RoommatesList = ({
 
   roommates,
@@ -30,14 +32,14 @@ const RoommatesList = ({
   }
 
   return (
-    <div>
+    <div className='roommate-list'>
       <div>
         {mapRoommates(roommates)}
       </div><br/>
       <a
         className="add-roomie"
         onClick={e => newRoommate(e)}>
-        Add Roommate + </a>
+        Add Roommate <span className="glyphicons glyphicons-user-add"></span> </a>
     </div>
   )
 

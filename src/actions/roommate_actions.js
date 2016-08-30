@@ -1,5 +1,4 @@
 import Roommate from '../utilities/roommates'
-import calculateTotal from '../utilities/total'
 
 export const NAME_EDIT = 'NAME_EDIT'
 export function updateName(id, name){
