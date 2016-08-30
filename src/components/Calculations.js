@@ -57,6 +57,7 @@ const Calculations = ({total, numberofRoommates, roommates, totalPerRoommate}) =
 
   return (
     <div>
+      <h3>Amounts Owed</h3>
       {resultsList}
     </div>
   )
