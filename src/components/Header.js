@@ -4,18 +4,24 @@ import { styleLogo } from '../utilities/styleFunctions'
 
 import '../css/Header.css'
 
+// const Header = () => (
+//
+// )
+
 class Header extends Component {
 
-    componentDidMount(){
-      styleLogo("white")
-    }
+  componentDidMount(){
+    styleLogo("white")
+  }
 
-    render(){
-      return (
-        <h1 className='title'>ROOMMAIDE</h1>
-      )
-    }
-
+  render(){
+    console.log('STYLE LOGO FUNCTION: ', styleLogo);
+    return (
+      <div className='header'>
+        <h1 className='logo' id='title'>ROOMMAIDE</h1>
+      </div>
+    )
+  }
 }
 
 export default Header
