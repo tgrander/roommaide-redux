@@ -1,29 +1,26 @@
-.header {
+/*.header {
+  margin: 40px 0 40px 0;
+}*/
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 3px 3px #000000;
+  transform: translateY(50%);
+  font-size: 80px;
+  font-family: 'Open Sans', sans-serif;
   margin: 40px 0 40px 0;
 }
 
-#title {
-  /*font-family: "arial", sans-serif;*/
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  /*font-size: 6em;*/
-  font-weight: bold;
-  text-align: center;
-  text-shadow: 3px 3px #1C1B1B;
-  transform: translateY(50%);
-}
+/*.logo {
+  margin: 40px 0 40px 0;
+  position: absolute;
+  top: 10px;
 
-.logo {
-  font-size: 80px;
-  color: #000000;
-  text-shadow: 0 4px 0 rgba(255, 255, 255, 0.5);
-  font-family: 'Open Sans', sans-serif;
-  /*font-family: 'Source Sans Pro', sans-serif;
-  font-family: 'Raleway', sans-serif;
-  font-family: 'Abel', sans-serif;
-  font-family: 'Poiret One', cursive;*/
-}
+}*/
 
-body {
+/*body {
   background-color: rgba(0,0,0,0)
-}
+}*/
