@@ -4,7 +4,7 @@ import '../css/Header.css'
 
 const Header = () => (
   <div className='header'>
-    <h1>ROOMMAIDE</h1>
+    <h1 className='logo'>ROOMMAIDE</h1>
   </div>
 )
 

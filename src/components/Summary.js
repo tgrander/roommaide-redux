@@ -2,8 +2,10 @@ import React from 'react'
 import Total from './Total'
 import Calculations from './Calculations'
 
+import '../css/Summary.css'
+
 const Summary = ({total, numberofRoommates, roommates, totalPerRoommate}) => (
-  <div>
+  <div className='summary'>
     <h3>Summary</h3>
     <Total
       total={total}

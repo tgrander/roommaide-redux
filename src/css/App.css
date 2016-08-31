@@ -1,0 +1,16 @@
+html {
+  background-image:
+    radial-gradient(
+      circle at top left,
+      #F9B6FD,
+      #7DD3CA
+    );
+  width: 100%;
+  height: 100%;
+}
+
+.App {
+  text-align: center;
+  margin: 0 auto;
+
+}
