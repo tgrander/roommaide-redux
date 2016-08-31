@@ -51,7 +51,7 @@ const Calculations = ({total, numberofRoommates, roommates, totalPerRoommate}) =
 // APPLIES ALLOCATION PERCENTAGE
   var results = underpaid.forEach((underpaidRoommateId) => {
     overpaid.forEach((overpaidRoommateId) => {
-      var thisAmount = parseFloat(Math.round(paidAmounts[underpaidRoommateId]*-1)*(allocationPercentages[overpaidRoommateId]).toFixed(2));
+      var thisAmount = (paidAmounts[underpaidRoommateId]*-1)*(allocationPercentages[overpaidRoommateId]).toFixed(2);
       console.log("Owed Amount: ", thisAmount);
       var result = <p className="result">{`${roommates[underpaidRoommateId].name} owes ${roommates[overpaidRoommateId].name} $${thisAmount}`}</p>
         resultsList.push(result);
@@ -61,7 +61,7 @@ const Calculations = ({total, numberofRoommates, roommates, totalPerRoommate}) =
 
   return (
     <div>
-      <h3>{currentMonth()}</h3>
+      <h3>Utilities for {currentMonth()}</h3>
       {resultsList}
     </div>
   )

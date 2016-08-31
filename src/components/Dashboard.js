@@ -5,6 +5,8 @@ import getTotalPerRoommate from '../reducers/reducer_roommates'
 import RoommatesList from './RoommatesList'
 import Summary from './Summary'
 
+import '../css/Dashboard.css'
+
 const Dashboard = ({
   roommates,
   onAmountInput,
@@ -17,7 +19,7 @@ const Dashboard = ({
   console.log('per roommate function: ', getTotalPerRoommate);
   const totalPerRoommate = getTotalPerRoommate(total, numberofRoommates)
   return (
-    <div>
+    <div className='dashboard'>
       <RoommatesList
         roommates={roommates}
         onAmountInput={onAmountInput}
