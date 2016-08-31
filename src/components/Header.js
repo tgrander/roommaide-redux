@@ -17,7 +17,7 @@ class Header extends Component {
   render(){
     console.log('STYLE LOGO FUNCTION: ', styleLogo);
     return (
-      <div className='header'>
+      <div className='header' >
         <h1 className='logo' id='title'>ROOMMAIDE</h1>
       </div>
     )
