@@ -1,8 +1,8 @@
 import React from 'react'
 
-import '../css/Calculations.css'
-
 import currentMonth from '../utilities/currentMonth.js'
+
+// import '../css/Calculations.css'
 
 const Calculations = ({total, numberofRoommates, roommates, totalPerRoommate}) => {
 
