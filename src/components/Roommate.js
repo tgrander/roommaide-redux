@@ -40,11 +40,6 @@ const Roommate = ( {
       })
   }
 
-  // const hideEditIcons = () => {
-  //   $('.invis').css("display", 'inline');
-  //
-  // }
-
   return (
     <div className='roommate' onMouseEnter={e => showEditIcons()}>
 

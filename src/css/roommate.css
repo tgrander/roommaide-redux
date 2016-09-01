@@ -19,3 +19,13 @@
   right: 5px;
   font-size: 18px;
 }
+
+.amount-input {
+  background-color: rgba(0,0,0,0);
+  color: #000000;
+  border: 1px solid;
+}
+
+/*::-webkit-input-placeholder, input:-moz-placeholder {
+   color: black;
+}*/

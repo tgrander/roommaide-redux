@@ -23,7 +23,7 @@
 a
 {
   text-decoration: none;
-  color: #232323;
+  color: #000000;
 
   transition: color 0.3s ease;
 }
@@ -74,7 +74,7 @@ a:hover
   margin-bottom: 5px;
   position: relative;
 
-  background: #cdcdcd;
+  background: white;
   border-radius: 3px;
 
   z-index: 1;
@@ -133,11 +133,12 @@ a:hover
 {
   position: absolute;
   width: 300px;
+  height: ;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
 
-  background: #ededed;
+  background: white;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -161,8 +162,4 @@ a:hover
 {
   transform: scale(1.0, 1.0);
   opacity: 1;
-}
-
-.hamburger {
-  color: #FFFFFF;
 }
