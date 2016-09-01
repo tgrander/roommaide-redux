@@ -1,5 +1,6 @@
 import React from 'react'
 
+import '../css/Totals.css'
 
 const Total = ({total, numberofRoommates, totalPerRoommate}) => {
 

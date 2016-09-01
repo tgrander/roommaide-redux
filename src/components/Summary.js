@@ -6,7 +6,7 @@ import '../css/Summary.css'
 
 const Summary = ({total, numberofRoommates, roommates, totalPerRoommate}) => (
   <div className='summary'>
-    <h3>Summary</h3>
+    <h2 className='summary-title'>Summary</h2>
     <Total
       total={total}
       numberofRoommates={numberofRoommates}

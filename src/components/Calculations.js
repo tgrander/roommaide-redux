@@ -1,5 +1,7 @@
 import React from 'react'
 
+import '../css/Calculations.css'
+
 import currentMonth from '../utilities/currentMonth.js'
 
 const Calculations = ({total, numberofRoommates, roommates, totalPerRoommate}) => {
@@ -59,8 +61,8 @@ const Calculations = ({total, numberofRoommates, roommates, totalPerRoommate}) =
 
   return (
     <div>
-      <h3>Utilities for {currentMonth()}</h3>
-      {resultsList}
+      <h2>Utilities for {currentMonth()}</h2>
+      <div className='result-list'>{resultsList}</div>
     </div>
   )
 }
