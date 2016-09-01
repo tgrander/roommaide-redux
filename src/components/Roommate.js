@@ -37,7 +37,7 @@ const Roommate = ( {
         paramName='name'
         change={updateName}
       />
-      <span className="glyphicons glyphicons-pencil"></span>
+      <span className='glyphicon glyphicon-pencil'></span>
       <br/>
 
       <InlineEdit
@@ -47,7 +47,7 @@ const Roommate = ( {
         paramName='utility'
         change={updateUtility}
       />
-      <span className="glyphicons glyphicons-pencil"></span>
+      <span className='glyphicon glyphicon-pencil'></span>
       <br/>
 
       <input
@@ -56,9 +56,9 @@ const Roommate = ( {
           placeholder="Enter Amount"
           onChange={e => input(e)}
       />
-
-      <span className="glyphicons glyphicons-remove-sign"></span>
-
+      <span className='remove-icon'>
+        <span className='glyphicon glyphicon-remove-circle'></span>
+      </span>  
     </div>
   )
 }

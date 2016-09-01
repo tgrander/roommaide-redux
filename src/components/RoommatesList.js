@@ -38,8 +38,12 @@ const RoommatesList = ({
       </div><br/>
       <a
         className="add-roomie"
-        onClick={e => newRoommate(e)}>
-        Add Roommate <span className="glyphicons glyphicons-user-add"></span> </a>
+        onClick={e => newRoommate(e)}
+      >
+        <span className='add-roomie-text'>Add Roommate</span>
+        <span className="glyphicon glyphicon-user"></span>
+        <span className="glyphicon glyphicon-plus"></span>
+      </a>
     </div>
   )
 

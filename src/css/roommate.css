@@ -2,8 +2,16 @@
   border: 1px solid #000000;
   padding: 5px;
   margin: 10px;
+  position: relative;
 }
 
-.delete {
-  
+.name, .utility, .amount-input {
+  margin: 8px;
+}
+
+.remove-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 18px;
 }
