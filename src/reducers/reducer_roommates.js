@@ -59,7 +59,7 @@ const roommates = (state=INITIAL_STATE, action) => {
         console.log('id of deleted roommate: ', id);
         console.log('new State before delete: ', newState);
         console.log('you\'re doing it right: ', !(state.roommates == newState.roommates));
-        delete newState.roommates.id
+        delete newState.roommates[id]
         console.log('new state after delete: ', newState);
         return newState
 
