@@ -1,6 +1,7 @@
 import Roommate from '../utilities/roommates'
 
 export const NAME_EDIT = 'NAME_EDIT'
+
 export function updateName(id, name){
   return {
     type: NAME_EDIT,
@@ -10,6 +11,7 @@ export function updateName(id, name){
 }
 
 export const UTILITY_EDIT = 'UTILITY_EDIT'
+
 export function updateUtility(id, utility){
   return {
     type: UTILITY_EDIT,
@@ -19,6 +21,7 @@ export function updateUtility(id, utility){
 }
 
 export const INPUT_AMOUNT = 'INPUT_AMOUNT'
+
 export function updateAmount(id, amount){
   return {
     type: INPUT_AMOUNT,
@@ -28,6 +31,7 @@ export function updateAmount(id, amount){
 }
 
 export const ADD_ROOMIE = 'ADD_ROOMIE'
+
 function updateRoommates(newRoommateId, newRoommate){
   return {
     type: ADD_ROOMIE,
@@ -35,7 +39,6 @@ function updateRoommates(newRoommateId, newRoommate){
     newRoommate
   }
 }
-
 export function addRoommate(){
   return dispatch => {
     const newRoommate = new Roommate()
@@ -45,10 +48,10 @@ export function addRoommate(){
 }
 
 export const DELETE_ROOMIE = 'DELETE_ROOMIE'
-export function deleteRoommate(id, roommates){
+
+export function deleteRoommate(id){
   return {
     type: DELETE_ROOMIE,
-    id,
-    numberofRoommates: Object.keys(roommates).length
+    id
   }
 }

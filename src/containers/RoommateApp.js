@@ -33,6 +33,9 @@ const mapDispatchToProps = (dispatch) => {
     onAddRoommateClick: () => {
       dispatch(addRoommate())
     },
+    onDeleteRoommateClick: (id) => {
+      dispatch(deleteRoommate(id))
+    },
     onUpdateName: (id, name) => {
       dispatch(updateName(id, name))
     },

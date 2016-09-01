@@ -5,13 +5,12 @@ import Roommate from './Roommate'
 import '../css/roommateList.css'
 
 const RoommatesList = ({
-
   roommates,
   onAmountInput,
   onAddRoommateClick,
   onUpdateName,
-  onUpdateUtility
-
+  onUpdateUtility,
+  onDeleteRoommateClick
 }) => {
 
   const mapRoommates = (roommates) => (
@@ -22,6 +21,7 @@ const RoommatesList = ({
         onAmountInput={onAmountInput}
         onUpdateName={onUpdateName}
         onUpdateUtility={onUpdateUtility}
+        onDeleteRoommateClick={onDeleteRoommateClick}
       />
     )
   )

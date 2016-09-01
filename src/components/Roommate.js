@@ -7,7 +7,8 @@ const Roommate = ( {
   roommate,
   onAmountInput,
   onUpdateName,
-  onUpdateUtility
+  onUpdateUtility,
+  onDeleteRoommateClick
 }) => {
 
   const id = roommate.id
@@ -25,6 +26,11 @@ const Roommate = ( {
 
   const updateUtility = (updatedContent) => {
     onUpdateUtility(id, updatedContent.utility)
+  }
+
+  const deleteRoommate = () => {
+    console.log('DELETED');
+    onDeleteRoommateClick(id)
   }
 
   const showEditIcons = () => {
@@ -73,7 +79,7 @@ const Roommate = ( {
           placeholder="Enter Amount"
           onChange={e => input(e)}
       />
-      <span className='remove-icon invis'>
+      <span className='remove-icon invis' onClick={e => deleteRoommate()}>
         <span className='glyphicon glyphicon-remove-circle'></span>
       </span>
     </div>

@@ -14,7 +14,8 @@ const Dashboard = ({
   total,
   numberofRoommates,
   onUpdateUtility,
-  onUpdateName
+  onUpdateName,
+  onDeleteRoommateClick
 }) => {
   console.log('per roommate function: ', getTotalPerRoommate);
   const totalPerRoommate = getTotalPerRoommate(total, numberofRoommates)
@@ -26,6 +27,7 @@ const Dashboard = ({
         onAddRoommateClick={onAddRoommateClick}
         onUpdateName={onUpdateName}
         onUpdateUtility={onUpdateUtility}
+        onDeleteRoommateClick={onDeleteRoommateClick}
         />
       <Summary
         roommates={roommates}
