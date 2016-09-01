@@ -29,7 +29,6 @@ const Roommate = ( {
   }
 
   const deleteRoommate = () => {
-    console.log('DELETED');
     onDeleteRoommateClick(id)
   }
 

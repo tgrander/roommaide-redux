@@ -8,8 +8,6 @@ const Calculations = ({total, numberofRoommates, roommates, totalPerRoommate}) =
     return numberofRoommates > 0 ? total/numberofRoommates : 0;
   }
 
-  console.log('current month function: ', currentMonth);
-
   const perRoommate = getTotalPerRoommate(total, numberofRoommates)
 
   //STORAGE AND VARIABLES USED IN CALCULATION

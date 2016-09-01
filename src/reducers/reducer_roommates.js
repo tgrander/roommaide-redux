@@ -29,13 +29,13 @@ const roommates = (state=INITIAL_STATE, action) => {
       })
 
     case UTILITY_EDIT:
-    return update(state, {
-      roommates: {
-        [action.id]: {
-          utility: {$set: action.utility}
+      return update(state, {
+        roommates: {
+          [action.id]: {
+            utility: {$set: action.utility}
+          }
         }
-      }
-    })
+      })
 
     case INPUT_AMOUNT:
       return update(state, {
@@ -52,6 +52,16 @@ const roommates = (state=INITIAL_STATE, action) => {
           [action.newRoommateId]: {$set: action.newRoommate}
         }
       })
+
+    case DELETE_ROOMIE:
+        const newState = $.extend(true, {}, state)
+        const id = action.id
+        console.log('id of deleted roommate: ', id);
+        console.log('new State before delete: ', newState);
+        console.log('you\'re doing it right: ', !(state.roommates == newState.roommates));
+        delete newState.roommates.id
+        console.log('new state after delete: ', newState);
+        return newState
 
     default:
       return state
