@@ -9,6 +9,10 @@
   margin: 8px;
 }
 
+.invis {
+  display: none;
+}
+
 .remove-icon {
   position: absolute;
   top: 5px;

@@ -27,8 +27,21 @@ const Roommate = ( {
     onUpdateUtility(id, updatedContent.utility)
   }
 
+  const showEditIcons = () => {
+      const icons = $('.invis')
+      icons.css('display', 'inline')
+      $('.roommate').bind('mouseleave', function(){
+        icons.css('display', 'none')
+      })
+  }
+
+  // const hideEditIcons = () => {
+  //   $('.invis').css("display", 'inline');
+  //
+  // }
+
   return (
-    <div className='roommate'>
+    <div className='roommate' onMouseEnter={e => showEditIcons()}>
 
       <InlineEdit
         className='name'
@@ -37,7 +50,9 @@ const Roommate = ( {
         paramName='name'
         change={updateName}
       />
-      <span className='glyphicon glyphicon-pencil'></span>
+      <span className='invis'>
+        <span className='glyphicon glyphicon-pencil'></span>
+      </span>
       <br/>
 
       <InlineEdit
@@ -47,7 +62,9 @@ const Roommate = ( {
         paramName='utility'
         change={updateUtility}
       />
-      <span className='glyphicon glyphicon-pencil'></span>
+      <span className='invis'>
+        <span className='glyphicon glyphicon-pencil'></span>
+      </span>
       <br/>
 
       <input
@@ -56,9 +73,9 @@ const Roommate = ( {
           placeholder="Enter Amount"
           onChange={e => input(e)}
       />
-      <span className='remove-icon'>
+      <span className='remove-icon invis'>
         <span className='glyphicon glyphicon-remove-circle'></span>
-      </span>  
+      </span>
     </div>
   )
 }
