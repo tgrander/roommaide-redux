@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 
 import Dashboard from '../components/Dashboard'
@@ -15,9 +15,6 @@ import {
 
 const mapStateToProps = (state) => {
   const { roommates } = state.roommates
-  console.log('ROOMMATES: ', roommates);
-  console.log('TOTAL: ', getTotal(roommates));
-  console.log('NUMBER OF ROOMMATES: ', getNumberOfRoommates(roommates));
   return {
     roommates: roommates,
     total: getTotal(roommates),

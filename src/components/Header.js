@@ -4,10 +4,6 @@ import { styleLogo } from '../utilities/styleFunctions'
 
 import '../css/Header.css'
 
-// const Header = () => (
-//
-// )
-
 class Header extends Component {
 
   componentDidMount(){

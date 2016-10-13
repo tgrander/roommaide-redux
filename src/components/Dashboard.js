@@ -37,9 +37,7 @@ const Dashboard = ({
         numberofRoommates={numberofRoommates}
         totalPerRoommate={totalPerRoommate}
         />
-
-      
-
+        
     </div>
   )
 }
